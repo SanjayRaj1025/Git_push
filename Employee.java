@@ -1,46 +1,65 @@
-package com.techno.assignments;
+package com.techno.streamapi;
 
 public class Employee {
+	int empid;
+	String empname;
+	double salary;
+	String designation;
+	int age;
 
-	private int id;
-	private String name;
-	private double salary;
-	static int count = 0;
-	{
-		count++;
-		System.out.println("welcome");
+	public Employee(int empid, String empname, double salary, String designation, int age) {
+		super();
+		this.empid = empid;
+		this.empname = empname;
+		this.salary = salary;
+		this.designation = designation;
+		this.age = age;
 	}
 
-	public void getid() {
-		System.out.println("Id:" + count);
-
+	public int getEmpid() {
+		return empid;
 	}
 
-	public void getname() {
-		System.out.println("name:" + name);
+	public void setEmpid(int empid) {
+		this.empid = empid;
 	}
 
-	public void getsalary() {
-		System.out.println("salary:" + salary);
-
+	public String getEmpname() {
+		return empname;
 	}
 
-	public void setsalary(double salary) {
+	public void setEmpname(String empname) {
+		this.empname = empname;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
 		this.salary = salary;
 	}
 
-	public void setname(String name) {
-		this.name = name;
+	public String getDesignation() {
+		return designation;
 	}
 
-	public void setid(int id) {
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
 
-		this.id = id;
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+		return "Employee [empid=" + empid + ", empname=" + empname + ", salary=" + salary + ", designation="
+				+ designation + ", age=" + age + "]";
 	}
 
 }

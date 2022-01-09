@@ -1,65 +1,36 @@
-package com.techno.streamapi;
 
 public class Employee {
-	int empid;
-	String empname;
-	double salary;
-	String designation;
-	int age;
+	private int eid;
+	private String Ename;
+	private double salary;
 
-	public Employee(int empid, String empname, double salary, String designation, int age) {
-		super();
-		this.empid = empid;
-		this.empname = empname;
-		this.salary = salary;
-		this.designation = designation;
-		this.age = age;
+	public Employee() {
+		System.out.println("Employee Object Started");
 	}
-
-	public int getEmpid() {
-		return empid;
+    
+	
+	public void setId(int eid) {
+		this.eid=eid;
 	}
-
-	public void setEmpid(int empid) {
-		this.empid = empid;
+	public int getId(){
+		return eid;
 	}
-
-	public String getEmpname() {
-		return empname;
+	
+	public void setEname(String Ename) {
+		this.Ename=Ename;
 	}
-
-	public void setEmpname(String empname) {
-		this.empname = empname;
+	
+	public String getEname() {
+		return Ename;
 	}
-
-	public double getSalary() {
+	
+	public void setsalary(double salary)
+	{
+		this.salary=salary;
+	}
+	
+	public double getsalary() {
 		return salary;
 	}
-
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
-
-	public String getDesignation() {
-		return designation;
-	}
-
-	public void setDesignation(String designation) {
-		this.designation = designation;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	@Override
-	public String toString() {
-		return "Employee [empid=" + empid + ", empname=" + empname + ", salary=" + salary + ", designation="
-				+ designation + ", age=" + age + "]";
-	}
-
+	
 }

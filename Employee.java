@@ -1,36 +1,48 @@
+package com.techno.encapsulation;
 
 public class Employee {
-	private int eid;
-	private String Ename;
-	private double salary;
+	
+	private int empid;
+	private String empname;
+	private int age;
+	private static String designation;
+	
+	public void setAge(int age) {
+		if(age>0&&age<100) {
+			this.age=age;
+		}
+		
+		else {
+			System.out.println("invalid age");
+		}
+	}
+	
+	public void getAge() {
+		System.out.println(age);
+	}
+	
+	public void setempid(int empid) {
+		this.empid=empid;
+	}
+	
+	public void getempid() {
+		System.out.println(empid);
+	}
+	
+	public void setempname(String empname) {
+		this.empname=empname;
+	}
+	
+	public void getempname() {
+		System.out.println(empname);
+	}
+	
+	public void setDesignation(String designation) {
+		this.designation=designation;
+	}
+	
+	public void getdesignation() {
+		System.out.println(designation);
+	}
 
-	public Employee() {
-		System.out.println("Employee Object Started");
-	}
-    
-	
-	public void setId(int eid) {
-		this.eid=eid;
-	}
-	public int getId(){
-		return eid;
-	}
-	
-	public void setEname(String Ename) {
-		this.Ename=Ename;
-	}
-	
-	public String getEname() {
-		return Ename;
-	}
-	
-	public void setsalary(double salary)
-	{
-		this.salary=salary;
-	}
-	
-	public double getsalary() {
-		return salary;
-	}
-	
 }

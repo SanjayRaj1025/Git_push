@@ -1,28 +1,17 @@
-package com.techno.exception;
-import java.util.Scanner;
+package com.techno.springwithscope;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Test {
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("enter the first number");
-		int x=sc.nextInt();
-		System.out.println("enter the second number");
-		int y=sc.nextInt();
-		try {
-			try
-			{
-				int[] a=new int[3];
-				a[2]=50;
-			}
-			catch(Exception e) {
-				System.out.println("size exceeded");
-			}
-			
-			int result=x/y;
-			System.out.println(result);
-		}
-		catch(Exception e) {
-			System.out.println("denominator shouldn't be zero");
-		}
+		ApplicationContext container=new ClassPathXmlApplicationContext("configuration.xml");
+		Demo bean = container.getBean(Demo.class);
+		System.out.println(bean);
+		Demo bean2 = container.getBean(Demo.class);
+		System.out.println(bean2);
+		Demo bean3 = container.getBean(Demo.class);
+		System.out.println(bean3);
 	}
 
 }

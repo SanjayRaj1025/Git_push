@@ -1,12 +1,24 @@
+package com.techno.threadclasswithrunnable;
 
 public class Main {
 	public static void main(String[] args) {
+		Runnable myThread=new Mythread();
+		Thread currentThread=Thread.currentThread();
+		System.out.println("The name fo the current thread is:"+Thread.currentThread().getName());
 		
-		Second s=new Second(1,2,3,4);
-		System.out.println(s.a);
-		System.out.println(s.b);
-		System.out.println(s.x);
-		System.out.println(s.y);
+		//code to set the name for the thread
+		
+		currentThread.setName("chota bheem");
+		System.out.println("The name of the thread is:"+Thread.currentThread().getName());
+		Thread thread=new Thread(myThread);
+		thread.setName("Chutki");
+		thread.start();
+		
+		//code to get id
+		
+		System.out.println("the thread id is:"+currentThread.getId());
+		
+		
 		
 	}
 

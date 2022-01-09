@@ -1,30 +1,14 @@
-package com.techno.abstractclass.loosecoupling;
+package com.techno.spring;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Driver {
-	Car car;
+	public static void main(String[] args) {
 
-	public void drive(String s) {
-		if (s.equalsIgnoreCase("audi")) {
-			car = new Audi();
-			car.start();
-			car.accerate();
-			car.brake();
-
-		}
-
-		if (s.equalsIgnoreCase("taarzan")) {
-			car = new Taarzan();
-			car.start();
-			car.accerate();
-			car.brake();
-		}
-
-		if (s.equalsIgnoreCase("rollsroyce")) {
-			car = new Rollsroyace();
-			car.start();
-			car.accerate();
-			car.brake();
-		}
+		ApplicationContext container = new ClassPathXmlApplicationContext("configuration.xml");
+		Car bean = container.getBean(Car.class);
+		bean.move();
 	}
 
 }

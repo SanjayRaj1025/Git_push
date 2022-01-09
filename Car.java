@@ -1,10 +1,17 @@
-package com.techno.abstractclass.loosecoupling;
+package com.techno.spring;
 
-public interface Car {
-	
-	public abstract void start();
-	public abstract void accerate();
-	public abstract void brake();
-	
+public class Car {
+	Garage e;
 
+	public Car(Garage e) {
+		super();
+		this.e = e;
+
+	}
+
+	public void move() {
+		e.start();
+		System.out.println("Car is moving");
+
+	}
 }
